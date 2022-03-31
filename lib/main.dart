@@ -34,9 +34,9 @@ class MyHomePage extends StatelessWidget {
               return Container(
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.circular(20),
-                ),
+                    //color: Colors.grey,
+                    //borderRadius: BorderRadius.circular(20),
+                    ),
                 child: Column(children: <Widget>[
                   Image.network('https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg'),
                   const Text("Titlee iki"),
