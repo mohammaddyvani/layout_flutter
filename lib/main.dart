@@ -49,13 +49,11 @@ class MyHomePage extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             itemCount: 4,
             itemBuilder: (context, index) {
-              return Container(
-                child: Column(children: <Widget>[
-                  Image.network(gambar[index][0]),
-                  Text(gambar[index][1]),
-                  //const SizedBox(height: 30)
-                ]),
-              );
+              return Column(children: <Widget>[
+                Image.network(gambar[index][0]),
+                Text(gambar[index][1]),
+                const SizedBox(height: 300)
+              ]);
             }));
   }
 }
