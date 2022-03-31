@@ -31,11 +31,10 @@ class MyHomePage extends StatelessWidget {
             itemCount: 4,
             itemBuilder: (context, index) {
               return Card(
-                  child: ListTile(
-                leading: Image.network("https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg"),
-                title: Text("Test", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                subtitle: Text("lorem ipsum dolor is amet.", style: TextStyle(fontSize: 10)),
-              ));
+                  child: Column(children: <Widget>[
+                Image.network('https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg'),
+                const Text('Test', style: TextStyle(fontWeight: FontWeight.bold))
+              ]));
             }));
   }
 }
