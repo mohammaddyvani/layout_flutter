@@ -20,6 +20,13 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({required this.title});
 
   final String title;
+  final List gambar = [
+    'https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg', 
+    'https://www.tempatwisata.pro/users_media/3150/Foto%20Pulau%20Merah.jpg', 
+    'https://idnexplore.com/wp-content/uploads/2020/01/Tempat-Wisata-Banyuwangi.jpg',
+    'https://pariwisatabanyuwangi.com/wp-content/uploads/2018/04/Baluran.jpg'
+  ]
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +39,8 @@ class MyHomePage extends StatelessWidget {
             itemCount: 4,
             itemBuilder: (context, index) {
               return Container(
-                //padding: const EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                    //color: Colors.grey,
-                    //borderRadius: BorderRadius.circular(20),
-                    ),
                 child: Column(children: <Widget>[
-                  Image.network('https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg'),
+                  Image.network(gambar[index]),
                   const Text("Titlee iki"),
                   const SizedBox(height: 30)
                 ]),
