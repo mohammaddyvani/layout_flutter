@@ -39,7 +39,8 @@ class MyHomePage extends StatelessWidget {
                 ),
                 child: Column(children: <Widget>[
                   Image.network('https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg'),
-                  const Text("Titlee iki")
+                  const Text("Titlee iki"),
+                  const SizedBox(height: 30)
                 ]),
               );
             }));
