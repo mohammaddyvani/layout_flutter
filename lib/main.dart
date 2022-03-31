@@ -53,7 +53,7 @@ class MyHomePage extends StatelessWidget {
                 child: Column(children: <Widget>[
                   Image.network(gambar[index][0]),
                   Text(gambar[index][1]),
-                  const SizedBox(height: 30)
+                  //const SizedBox(height: 30)
                 ]),
               );
             }));
