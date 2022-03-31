@@ -1,5 +1,3 @@
-// GridView Flutter
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -10,9 +8,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Belajar Layout',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.brown,
       ),
-      home: MyHomePage(title: 'Gallery'),
+      home: MyHomePage(title: 'Galeri'),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -29,15 +27,18 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(title),
         ),
-        body: GridView.builder(
-            padding: const EdgeInsets.all(8.0),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-            itemCount: 24,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network("https://poliwangi.ac.id/wp-content/uploads/2021/02/logo-poliwangi.png"),
-              );
-            }));
+        body: ListView.builder(
+          itemCount: 4,
+          itemBuilder: (context, index){
+            return Card(
+              child: ListTile(
+                leading: Image.network("https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg"),
+                title: Text("Test", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                subtitle: Text("lorem ipsum dolor is amet.", style: TextStyle(fontSize: 10)),
+              )
+            )
+          }
+        )
+        );
   }
 }
