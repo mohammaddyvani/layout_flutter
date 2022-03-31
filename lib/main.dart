@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: GridView.count(
-          crossAxisCount: 2,
+          crossAxisCount: 3,
           mainAxisSpacing: 20.0,
           padding: EdgeInsets.only(top: 50),
           children: <Widget>[
