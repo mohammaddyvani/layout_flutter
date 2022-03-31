@@ -32,7 +32,7 @@ class MyHomePage extends StatelessWidget {
             itemCount: 4,
             itemBuilder: (context, index) {
               return Container(
-                padding: const EdgeInsets.all(8.0),
+                //padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                     //color: Colors.grey,
                     //borderRadius: BorderRadius.circular(20),
