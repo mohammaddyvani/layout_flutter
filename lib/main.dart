@@ -1,4 +1,5 @@
 // GridView Flutter
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -16,82 +17,26 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   MyHomePage({required this.title});
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text(title),
         ),
-        body: GridView.count(
-          crossAxisCount: 3,
-          mainAxisSpacing: 20.0,
-          padding: EdgeInsets.only(top: 50),
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                Image(
-                  width: 120.0,
-                  image: NetworkImage("https://poliwangi.ac.id/wp-content/uploads/2021/02/logo-poliwangi.png"),
-                ),
-                Text("Hulk", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.blue))
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Image(
-                  width: 120.0,
-                  image: NetworkImage("https://poliwangi.ac.id/wp-content/uploads/2021/02/logo-poliwangi.png"),
-                ),
-                Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.blue))
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Image(
-                  width: 120.0,
-                  image: NetworkImage("https://poliwangi.ac.id/wp-content/uploads/2021/02/logo-poliwangi.png"),
-                ),
-                Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.blue))
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Image(
-                  width: 120.0,
-                  image: NetworkImage("https://poliwangi.ac.id/wp-content/uploads/2021/02/logo-poliwangi.png"),
-                ),
-                Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.blue))
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Image(
-                  width: 120.0,
-                  image: NetworkImage("https://poliwangi.ac.id/wp-content/uploads/2021/02/logo-poliwangi.png"),
-                ),
-                Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.blue))
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Image(
-                  width: 120.0,
-                  image: NetworkImage("https://poliwangi.ac.id/wp-content/uploads/2021/02/logo-poliwangi.png"),
-                ),
-                Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.blue))
-              ],
-            ),
-          ],
-        ));
+        body: GridView.builder(
+            padding: const EdgeInsets.all(8.0),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+            itemCount: 24,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network("https://poliwangi.ac.id/wp-content/uploads/2021/02/logo-poliwangi.png"),
+              );
+            }));
   }
 }
