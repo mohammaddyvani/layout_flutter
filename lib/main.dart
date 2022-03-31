@@ -28,13 +28,17 @@ class MyHomePage extends StatelessWidget {
           title: Text(title),
         ),
         body: ListView.builder(
+            padding: const EdgeInsets.all(10.0),
             itemCount: 4,
             itemBuilder: (context, index) {
-              return Card(
-                  child: Column(children: <Widget>[
-                Image.network('https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg'),
-                const Text('Test', style: TextStyle(fontWeight: FontWeight.bold))
-              ]));
+              return Container(
+                child: Column(children: <Widget>[
+                  Image.network('https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg'),
+                  Stack(children: [
+                    const Text('Test')
+                  ])
+                ]),
+              );
             }));
   }
 }
