@@ -21,12 +21,11 @@ class MyHomePage extends StatelessWidget {
 
   final String title;
   final List gambar = [
-    'https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg', 
-    'https://www.tempatwisata.pro/users_media/3150/Foto%20Pulau%20Merah.jpg', 
+    'https://cdn-cas.orami.co.id/parenting/images/Wisata_Banyuwangi_-_De_Djawatan.width-800.jpg',
+    'https://www.tempatwisata.pro/users_media/3150/Foto%20Pulau%20Merah.jpg',
     'https://idnexplore.com/wp-content/uploads/2020/01/Tempat-Wisata-Banyuwangi.jpg',
     'https://pariwisatabanyuwangi.com/wp-content/uploads/2018/04/Baluran.jpg'
-  ]
-
+  ];
 
   @override
   Widget build(BuildContext context) {
